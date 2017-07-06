@@ -1,0 +1,52 @@
+/*
+	Subject Code: INT322
+	Student Name: Yahya Assowe
+	Date Submitted: June 22, 2017
+	Student Declaration
+	I/we declare that the attached assignment is my/our own work in accordance with Seneca Academic Policy. No part of this assignment has been copied manually or electronically from any other source (including web sites) or distributed to other students.
+	Name: Yahya Assowe
+	Student ID: 018822148	
+*/
+/* Global Styles*/
+html{
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+h1 {
+    color: orange;
+}
+h2 {
+    text-align: center;
+}
+h6 {
+	font-size: 20px;
+}
+div {
+	border-style: solid;
+    border-color: #D6E5A6 white #98BF21 #9AC025;
+}
+div.outset {border-style: outset;}
+tr:hover, tr:nth-child(even){background-color:#f5f5f5}
+#viewStyle table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#viewStyle th{
+	background-color:#DDBF81;
+	color: black;
+}
+#viewStyle tr:nth-child(even){background-color:#f5f5f5}
+#viewStyle td{
+	background-color: #EAF2D3;
+}
+#viewStyle th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.img{
+    display: block;
+    margin: 0 auto;
+}
