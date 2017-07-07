@@ -16,47 +16,41 @@ $sql_query = "SELECT * FROM inventory";
 $result = mysqli_query($link, $sql_query) or die('query failed'. mysqli_error($link));
 
 ?>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>View</title>
-		<link href='CSS/styles.css' rel='stylesheet' type='text/css' />
-    </head>
-    <body>
 <?php
-        navBar();
+	head("View");
+    navBar();
 ?>
-		<img class="img" src='IMAGE/oldMan.jpg' alt='sketch of an old man on the ttc.png' height='200' width='1000'><br>	
-		<div id="viewStyle" style="overflow-x:auto;">
-			<table border='1' id= results>
-				<tr>
-					<th>ID</th>
-					<th>Item Name</th>
-					<th>Description</th>
-					<th>Supplier</th>
-					<th>Cost</th>
-					<th>Price</th>
-					<th>Number On Hand</th>
-					<th>Reorder Level</th>
-					<th>On Back Order?</th>
-					<th>Delete/Restore</th>
-				</tr>
+	<img class="img" src='IMAGE/oldMan.jpg' alt='sketch of an old man on the ttc.png' height='200' width='1000'><br>	
+	<div id="viewStyle" style="overflow-x:auto;">
+		<table border='1' id= results>
+			<tr>
+				<th>ID</th>
+				<th>Item Name</th>
+				<th>Description</th>
+				<th>Supplier</th>
+				<th>Cost</th>
+				<th>Price</th>
+				<th>Number On Hand</th>
+				<th>Reorder Level</th>
+				<th>On Back Order?</th>
+				<th>Delete/Restore</th>
+			</tr>
 <?php
 		while($row = mysqli_fetch_assoc($result))
  		{
 ?>
-				<tr>
-					<td><?php print $row['id']; ?></td>
-					<td><?php print $row['itemName']; ?></td>
-					<td><?php print $row['description']; ?></td>
-					<td><?php print $row['supplierCode']; ?></td>
-					<td><?php print $row['cost']; ?></td>
-					<td><?php print $row['price']; ?></td>
-					<td><?php print $row['onHand']; ?></td>
-					<td><?php print $row['reorderPoint']; ?></td>
-					<td><?php print $row['backOrder']; ?></td>
-					<td><a href="delete.php?id=<?php echo $row['id'] . "&deleted=" . $row['deleted']?>"><?php if($row['deleted'] == 'n'){echo "Delete";}else{echo"Restore";}?></a></td>
-				</tr>
+			<tr>
+				<td><?php print $row['id']; ?></td>
+				<td><?php print $row['itemName']; ?></td>
+				<td><?php print $row['description']; ?></td>
+				<td><?php print $row['supplierCode']; ?></td>
+				<td><?php print $row['cost']; ?></td>
+				<td><?php print $row['price']; ?></td>
+				<td><?php print $row['onHand']; ?></td>
+				<td><?php print $row['reorderPoint']; ?></td>
+				<td><?php print $row['backOrder']; ?></td>
+				<td><a href="delete.php?id=<?php echo $row['id'] . "&deleted=" . $row['deleted']?>"><?php if($row['deleted'] == 'n'){echo "Delete";}else{echo"Restore";}?></a></td>
+			</tr>
 <?php
 		}
 	// Free resultset
@@ -65,8 +59,6 @@ $result = mysqli_query($link, $sql_query) or die('query failed'. mysqli_error($l
 	//Close the MySQL Link
  	mysqli_close($link);
 ?>
-			</table>
-		</div>
-		<?php footer(); ?>
-		</body>
-</html>
+		</table>
+	</div>
+<?php footer(); ?>

@@ -44,23 +44,23 @@ function navBar(){ // Navigation menu for ADD.php and VIEW.php
 <?php
 function head($title){// Head content for ADD.php ... i know its pointless but i wanted to practice making functions.
 ?>
+	<!DOCTYPE html>
+	<html>
 	<head>
 		<title><?php $title;?></title>
 		<link href='CSS/styles.css' rel='stylesheet' type='text/css' />
 	</head>
 	<body>
-		<h1>Bob's Olde Fashioned Print Books</h1>
-		<img src='IMAGE/sketch.PNG' alt='sketch of an old man on the ttc.png' height='300' width='300'><br>		
-		<?php navBar();?>
-		<p>All fields mandatory except "On Back Order"</p>
-	</body>
+		<h1>Bob's Olde Fashioned Print Books</h1>	
 <?php
 }
 ?>
 <?php
 function footer(){ // Footer content added to all pages
 ?>
-	<footer><h6>Copyright &copy; Yahya Assowe 2017</h6></footer>
+		<footer><h6>Copyright &copy; Yahya Assowe 2017</h6></footer>
+	</body>
+	</html
 <?php
 }
 ?>

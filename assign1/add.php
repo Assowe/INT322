@@ -102,10 +102,11 @@ $dataValid = true;
 		}
 	} else {
 	?>
-<!DOCTYPE html>
-<html>
-   <?php head("Add Item"); ?>
-   <form method="get" action="add.php">
+    <?php head("Add Item"); ?>
+    <img src='IMAGE/sketch.PNG' alt='sketch of an old man on the ttc.png' height='300' width='300'><br>		
+	<?php navBar();?>
+	<p>All fields mandatory except "On Back Order"</p>
+    <form method="get" action="add.php">
       <table>
         <tr>
 	<td>Item name:</td>
